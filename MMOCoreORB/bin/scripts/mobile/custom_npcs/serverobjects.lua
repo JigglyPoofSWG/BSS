@@ -1,1 +1,1 @@
-includeFile("world_boss/serverobjects.lua")
+includeFile("custom_npcs/world_boss/serverobjects.lua")

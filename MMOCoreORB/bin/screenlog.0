@@ -1,0 +1,281 @@
+GNU gdb (Debian 7.7.1+dfsg-5) 7.7.1
+Copyright (C) 2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./core3...^C^Cdone.
+Quit
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff5aa4700 (LWP 63462)]
+[Thread 0x7ffff5aa4700 (LWP 63462) exited]
+[New Thread 0x7ffff5aa4700 (LWP 63463)]
+[New Thread 0x7ffff5097700 (LWP 63464)]
+[New Thread 0x7ffff4896700 (LWP 63465)]
+[New Thread 0x7fffeffff700 (LWP 63466)]
+[New Thread 0x7fffef7fe700 (LWP 63467)]
+[New Thread 0x7fffeeffd700 (LWP 63468)]
+[New Thread 0x7fffee7fc700 (LWP 63469)]
+[New Thread 0x7fffedffb700 (LWP 63470)]
+[New Thread 0x7fffed7fa700 (LWP 63471)]
+[New Thread 0x7fffecff9700 (LWP 63472)]
+[New Thread 0x7fffcbfff700 (LWP 63473)]
+[New Thread 0x7fffcb7fe700 (LWP 63474)]
+[New Thread 0x7fffcaffd700 (LWP 63475)]
+[New Thread 0x7fffca7fc700 (LWP 63476)]
+[New Thread 0x7fffc9ffb700 (LWP 63477)]
+[New Thread 0x7fffc97fa700 (LWP 63478)]
+[New Thread 0x7fffc8ff9700 (LWP 63479)]
+[New Thread 0x7fffb3fff700 (LWP 63480)]
+[New Thread 0x7fffb37fe700 (LWP 63481)]
+[New Thread 0x7fffb2ffd700 (LWP 63482)]
+[New Thread 0x7fffb27fc700 (LWP 63483)]
+[New Thread 0x7fffb1ffb700 (LWP 63484)]
+[New Thread 0x7fffb17fa700 (LWP 63485)]
+[New Thread 0x7fffb0ff9700 (LWP 63486)]
+[New Thread 0x7fffabfff700 (LWP 63487)]
+[New Thread 0x7fffab7fe700 (LWP 63488)]
+[New Thread 0x7fffaaffd700 (LWP 63489)]
+[New Thread 0x7fffaa7fc700 (LWP 63490)]
+[New Thread 0x7fffa9ffb700 (LWP 63491)]
+[New Thread 0x7fffa97fa700 (LWP 63492)]
+[New Thread 0x7fffa8ff9700 (LWP 63493)]
+[New Thread 0x7fffa87f8700 (LWP 63494)]
+[New Thread 0x7fffa7ff7700 (LWP 63495)]
+[New Thread 0x7fffa77f6700 (LWP 63496)]
+[New Thread 0x7fffa6ff5700 (LWP 63497)]
+[New Thread 0x7fffa67f4700 (LWP 63498)]
+[New Thread 0x7fffa5ff3700 (LWP 63499)]
+[New Thread 0x7fffa57f2700 (LWP 63500)]
+[New Thread 0x7fffa4ff1700 (LWP 63501)]
+[New Thread 0x7fffa47f0700 (LWP 63502)]
+[New Thread 0x7fffa3fef700 (LWP 63503)]
+[New Thread 0x7fffa37ee700 (LWP 63504)]
+[New Thread 0x7fffa2fed700 (LWP 63505)]
+[New Thread 0x7fffa27ec700 (LWP 63506)]
+[New Thread 0x7fffa1feb700 (LWP 63507)]
+[New Thread 0x7fffa17ea700 (LWP 63508)]
+[New Thread 0x7fffa0fe9700 (LWP 63509)]
+[New Thread 0x7fffa07e8700 (LWP 63510)]
+[New Thread 0x7fff9ffe7700 (LWP 63511)]
+[New Thread 0x7fff9f7e6700 (LWP 63512)]
+[New Thread 0x7fff9efe5700 (LWP 63513)]
+[New Thread 0x7fff9e7e4700 (LWP 63514)]
+[New Thread 0x7fff9dfe3700 (LWP 63515)]
+[New Thread 0x7fff9d7e2700 (LWP 63516)]
+[New Thread 0x7fff9cfe1700 (LWP 63517)]
+[New Thread 0x7fff9c7e0700 (LWP 63518)]
+[New Thread 0x7fff9bfdf700 (LWP 63519)]
+[New Thread 0x7fff9b7de700 (LWP 63520)]
+[New Thread 0x7fff9afdd700 (LWP 63521)]
+[New Thread 0x7fff9a7dc700 (LWP 63522)]
+[New Thread 0x7fff99fdb700 (LWP 63523)]
+[New Thread 0x7fff997da700 (LWP 63524)]
+[New Thread 0x7fff98fd9700 (LWP 63525)]
+[New Thread 0x7fff987d8700 (LWP 63526)]
+[New Thread 0x7fff97fd7700 (LWP 63527)]
+[New Thread 0x7fff977d6700 (LWP 63528)]
+[New Thread 0x7fff96fd5700 (LWP 63529)]
+[New Thread 0x7fff967d4700 (LWP 63530)]
+[New Thread 0x7fff95fd3700 (LWP 63531)]
+[New Thread 0x7fff957d2700 (LWP 63532)]
+[New Thread 0x7fff94fd1700 (LWP 63533)]
+[New Thread 0x7fff947d0700 (LWP 63534)]
+[New Thread 0x7fff93fcf700 (LWP 63535)]
+[New Thread 0x7fff937ce700 (LWP 63536)]
+[New Thread 0x7fff92fcd700 (LWP 63537)]
+[New Thread 0x7fff927cc700 (LWP 63538)]
+[New Thread 0x7fff91fcb700 (LWP 63539)]
+[New Thread 0x7fff917ca700 (LWP 63540)]
+[New Thread 0x7fff90fc9700 (LWP 63541)]
+[New Thread 0x7fff907c8700 (LWP 63542)]
+(0 s) [TaskScheduler0] started
+[New Thread 0x7fff8ffc7700 (LWP 63543)]
+(0 s) [TaskScheduler1] started
+[New Thread 0x7fff8f7c6700 (LWP 63544)]
+(0 s) [TaskScheduler2] started
+[New Thread 0x7fff8efc5700 (LWP 63545)]
+(0 s) [TaskScheduler3] started
+[New Thread 0x7fff8e7c4700 (LWP 63546)]
+(0 s) [TaskScheduler4] started
+[New Thread 0x7fff8dfc3700 (LWP 63547)]
+(0 s) [TaskScheduler5] started
+[New Thread 0x7fff8d7c2700 (LWP 63548)]
+(0 s) [TaskScheduler6] started
+[New Thread 0x7fff8cfc1700 (LWP 63549)]
+(0 s) [TaskScheduler7] started
+[New Thread 0x7fff8c7c0700 (LWP 63550)]
+(0 s) [TaskScheduler8] started
+[New Thread 0x7fff8bfbf700 (LWP 63551)]
+(0 s) [TaskScheduler9] started
+[New Thread 0x7fff8b7be700 (LWP 63552)]
+(0 s) [TaskScheduler10] started
+[New Thread 0x7fff8afbd700 (LWP 63553)]
+(0 s) [TaskScheduler11] started
+[New Thread 0x7fff8a7bc700 (LWP 63554)]
+(0 s) [TaskScheduler12] started
+[New Thread 0x7fff89fbb700 (LWP 63555)]
+(0 s) [TaskScheduler13] started
+[New Thread 0x7fff897ba700 (LWP 63556)]
+(0 s) [TaskScheduler14] started
+[New Thread 0x7fff88fb9700 (LWP 63557)]
+(0 s) [TaskScheduler15] started
+[New Thread 0x7fff887b8700 (LWP 63558)]
+(0 s) [TaskScheduler16] started
+[New Thread 0x7fff87fb7700 (LWP 63559)]
+(0 s) [TaskScheduler17] started
+[New Thread 0x7fff877b6700 (LWP 63560)]
+(0 s) [TaskScheduler18] started
+[New Thread 0x7fff86fb5700 (LWP 63561)]
+(0 s) [TaskScheduler19] started
+[New Thread 0x7fff867b4700 (LWP 63562)]
+(0 s) [IoTaskScheduler0] started
+[New Thread 0x7fff85fb3700 (LWP 63563)]
+(0 s) [IoTaskScheduler1] started
+[New Thread 0x7fff857b2700 (LWP 63564)]
+(0 s) [IoTaskScheduler2] started
+[New Thread 0x7fff84fb1700 (LWP 63565)]
+(0 s) [IoTaskScheduler3] started
+[New Thread 0x7fff847b0700 (LWP 63566)]
+(0 s) [IoTaskScheduler4] started
+[New Thread 0x7fff83faf700 (LWP 63567)]
+(0 s) [IoTaskScheduler5] started
+[New Thread 0x7fff837ae700 (LWP 63568)]
+(0 s) [IoTaskScheduler6] started
+[New Thread 0x7fff82fad700 (LWP 63569)]
+(0 s) [IoTaskScheduler7] started
+[New Thread 0x7fff827ac700 (LWP 63570)]
+(0 s) [IoTaskScheduler8] started
+[New Thread 0x7fff81fab700 (LWP 63571)]
+(0 s) [IoTaskScheduler9] started
+[New Thread 0x7fff817aa700 (LWP 63572)]
+[New Thread 0x7fff80fa9700 (LWP 63573)]
+[New Thread 0x7fff807a8700 (LWP 63574)]
+[New Thread 0x7fff7ffa7700 (LWP 63575)]
+[New Thread 0x7fff7f7a6700 (LWP 63576)]
+[New Thread 0x7fff7efa5700 (LWP 63577)]
+[New Thread 0x7fff7e7a4700 (LWP 63578)]
+[New Thread 0x7fff7dfa3700 (LWP 63579)]
+[New Thread 0x7fff7d7a2700 (LWP 63580)]
+[New Thread 0x7fff7cfa1700 (LWP 63581)]
+[New Thread 0x7fff7c7a0700 (LWP 63582)]
+[New Thread 0x7fff7bf9f700 (LWP 63583)]
+(2 s) [DatabaseManager] loading object database: clientobjects with id 0x0 with compression enabled
+(2 s) [DatabaseManager] loading object database: playerstructures with id 0x2 with compression enabled
+(2 s) [DatabaseManager] loading object database: missionobjectives with id 0x4 with compression enabled
+(2 s) [DatabaseManager] loading object database: cityregions with id 0x6 with compression enabled
+(2 s) [DatabaseManager] loading object database: spawnareas with id 0x8 with compression enabled
+(2 s) [DatabaseManager] loading object database: aiobservers with id 0xa with compression enabled
+(2 s) [DatabaseManager] loading object database: questdata with id 0xc with compression enabled
+(2 s) [DatabaseManager] loading object database: accounts with id 0xe with compression enabled
+(2 s) [DatabaseManager] loading local database: strings with id 0xf with compression enabled
+(2 s) [DatabaseManager] loading object database: mail with id 0x10 with compression enabled
+(2 s) [DatabaseManager] loading object database: resourcespawns with id 0x12 with compression enabled
+(2 s) [DatabaseManager] loading object database: auctionitems with id 0x14 with compression enabled
+(2 s) [DatabaseManager] loading object database: sceneobjects with id 0x1 with compression enabled
+(2 s) [DatabaseManager] loading object database: buffs with id 0x3 with compression enabled
+(2 s) [DatabaseManager] loading object database: missionobservers with id 0x5 with compression enabled
+(2 s) [DatabaseManager] loading object database: guilds with id 0x7 with compression enabled
+(2 s) [DatabaseManager] loading object database: spawnobservers with id 0x9 with compression enabled
+(2 s) [DatabaseManager] loading object database: events with id 0xb with compression enabled
+(2 s) [DatabaseManager] loading object database: surveys with id 0xd with compression enabled
+(2 s) [DatabaseManager] loading object database: draftschematics with id 0x11 with compression enabled
+(2 s) [DatabaseManager] loading object database: chatrooms with id 0x13 with compression enabled
+(2 s) [DatabaseManager] loaded database version: 6
+(4 s) [TemplateManager] Loaded 85 slot definitions.
+(4 s) [TemplateManager] Loaded 74 planet map categories.
+(4 s) [TemplateManager] loading asset customization manager
+(4 s) [TemplateManager] loading customization id manager
+(4 s) [CustomizationIdManager] loaded 115 customization ids
+(4 s) [CustomizationIdManager] loaded 37 palette columns
+(4 s) [CustomizationIdManager] loaded 37 hair assets
+(4 s) [CustomizationIdManager] loaded 16 allow bald species data
+(4 s) [TemplateManager] Loading object templates
+file:scripts/object/custom_content/building/kashyyyk/objects.lua ERROR cannot open scripts/object/custom_content/building/kashyyyk/objects.lua: No such file or directory
+file:scripts/object/custom_content/tangible/wearables/backpack/objects.lua ERROR cannot open scripts/object/custom_content/tangible/wearables/backpack/objects.lua: No such file or directory
+(4 s) [Console] WARNING - expecting SHOT got SBOT in file: object/building/base/shared_base_filler_building.iff
+(4 s) [Console] WARNING - expecting SHOT got SBOT in file: object/building/base/shared_base_filler_building.iff
+(4 s) [Console] WARNING - expecting SHOT got SBOT in file: object/building/base/shared_base_filler_building.iff
+        Loading templates: [0%]         Loading templates: [1%]         Loading templates: [2%]         Loading templates: [3%]         Loading templates: [4%]         Loading templates: [5%]         Loading templates: [6%]         Loading templates: [7%]         Loading templates: [8%]         Loading templates: [9%]         Loading templates: [10%]                Loading templates: [11%]                Loading templates: [12%]                Loading templates: [13%]                Loading templates: [14%]                Loading templates: [15%]                Loading templates: [16%]                Loading templates: [17%]                Loading templates: [18%]                Loading templates: [19%]                Loading templates: [20%]                Loading templates: [21%]                Loading templates: [22%]                Loading templates: [23%]                Loading templates: [24%]                Loading templates: [25%]                Loading templates: [26%]                Loading templates: [27%]                Loading templates: [28%]                Loading templates: [29%]                Loading templates: [30%]                Loading templates: [31%]                Loading templates: [32%]                Loading templates: [33%]                Loading templates: [34%]                Loading templates: [35%]                Loading templates: [36%]                Loading templates: [37%]                Loading templates: [38%]                Loading templates: [39%]                Loading templates: [40%]        (16 s) [Console] WARNING - expecting SHOT got RCCT in file: object/resource_container/shared_simple.iff
+        Loading templates: [41%]                Loading templates: [42%]                Loading templates: [43%]        (17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+        Loading templates: [44%]                Loading templates: [45%]                Loading templates: [46%]        (17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(17 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+        Loading templates: [47%]                Loading templates: [48%]                Loading templates: [49%]                Loading templates: [50%]        (18 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(18 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(18 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+        Loading templates: [51%]                Loading templates: [52%]        (18 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(18 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(18 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(18 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(18 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(18 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(18 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(18 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(18 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+        Loading templates: [53%]                Loading templates: [54%]                Loading templates: [55%]                Loading templates: [56%]                Loading templates: [57%]                Loading templates: [58%]                Loading templates: [59%]                Loading templates: [60%]                Loading templates: [61%]                Loading templates: [62%]                Loading templates: [63%]                Loading templates: [64%]                Loading templates: [65%]                Loading templates: [66%]                Loading templates: [67%]                Loading templates: [68%]                Loading templates: [69%]                Loading templates: [70%]                Loading templates: [71%]                Loading templates: [72%]                Loading templates: [73%]                Loading templates: [74%]                Loading templates: [75%]                Loading templates: [76%]                Loading templates: [77%]                Loading templates: [78%]        (23 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(23 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(23 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(23 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(23 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+(23 s) [Console] ERROR - exception caught parsing file data ->StreamIndexOutOfBoundsException at 21
+
+        Loading templates: [79%]                Loading templates: [80%]                Loading templates: [81%]                Loading templates: [82%]                Loading templates: [83%]                Loading templates: [84%]                Loading templates: [85%]                Loading templates: [86%]                Loading templates: [87%]                Loading templates: [88%]                Loading templates: [89%]                Loading templates: [90%]                Loading templates: [91%]        (26 s) [Console] WARNING - expecting SHOT got SSHP in file: object/ship/base/shared_ship_base.iff
+(26 s) [Console] WARNING - expecting SHOT got SSHP in file: object/ship/base/shared_ship_base.iff
+(26 s) [Console] WARNING - expecting SHOT got SSHP in file: object/ship/base/shared_ship_base.iff
+(26 s) [Console] WARNING - expecting SHOT got SSHP in file: object/ship/base/shared_ship_base.iff
+        Loading templates: [92%]                Loading templates: [93%]                Loading templates: [94%]                Loading templates: [95%]                Loading templates: [96%]                Loading templates: [97%]                Loading templates: [98%]                Loading templates: [99%]                Loading templates: [100%]       

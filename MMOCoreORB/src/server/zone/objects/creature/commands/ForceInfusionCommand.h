@@ -73,46 +73,14 @@ public:
 		
 			int duration = 40;
 			
-			/*int amountOfTicks = 5;
-			Locker lockerC(creature);
-			Locker lockerCT(creatureTarget,creature);
-			if(creature != NULL && creatureTarget != NULL) {
-			if (counter < amountOfTicks && !creatureTarget->isIncapacitated() && !creatureTarget->isDead()) {
-				int health = 500;
-				creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, health, true);
-				creatureTarget->healDamage(creature, CreatureAttribute::ACTION, health, true);
-				creatureTarget->healDamage(creature, CreatureAttribute::MIND, health, true);
-				creatureTarget->playEffect("clienteffect/pl_force_heal_self.cef", "");
-				counter++;
-				this->reschedule(8000); // Reschedule in 8 seconds...
-			}*/
-			
-			/*ManagedReference<SingleUseBuff*> buff = new SingleUseBuff(creatureTarget, buffCRC, duration, BuffType::JEDI, getNameCRC());*/
-			ManagedReference<SingleUseBuff*> buff = new SingleUseBuff(creatureTarget, buffCRC, duration, BuffType::JEDI, buffCRC);
+			ManagedReference<SingleUseBuff*> buff = new SingleUseBuff(creatureTarget, buffCRC, duration, BuffType::JEDI, getNameCRC());
+			//ManagedReference<SingleUseBuff*> buff = new SingleUseBuff(creatureTarget, buffCRC, duration, BuffType::JEDI, buffCRC);
 
 			creatureTarget->addBuff(buff);
 			
-			Reference<BactaInfusionTickTask*> biTask = new BactaInfusionTickTask(creature, creatureTarget);
-			creatureTarget->addPendingTask("BactaInfusionTickTask", biTask, 1000);
+			Reference<ForceInfusionTask*> infusion = new ForceInfusionTask(creature, creatureTarget);
+			creatureTarget->addPendingTask("ForceInfusionTask", infusion, 1000);
 	}
-	/*public Task {
-			int counter = 0;
-			int amountOfTicks = 5;
-			Locker lockerC(creature);
-			Locker lockerCT(creatureTarget,creature);
-			if(creature != NULL && creatureTarget != NULL) {
-			if (counter < amountOfTicks && !creatureTarget->isIncapacitated() && !creatureTarget->isDead()) {
-				int health = 500;
-				creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, health, true);
-				creatureTarget->healDamage(creature, CreatureAttribute::ACTION, health, true);
-				creatureTarget->healDamage(creature, CreatureAttribute::MIND, health, true);
-				creatureTarget->playEffect("clienteffect/pl_force_heal_self.cef", "");
-				counter++;
-				this->reschedule(8000); // Reschedule in 8 seconds...
-			}
-			
-
-		}*/
 };
 
 #endif //ForceInfusionCOMMAND_H_

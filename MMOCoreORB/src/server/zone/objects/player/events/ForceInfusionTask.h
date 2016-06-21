@@ -15,6 +15,7 @@ class ForceInfusionTask : public Task {
  ManagedReference<CreatureObject*> creature;
  ManagedReference<CreatureObject*> creatureTarget;
  int counter;
+ int amountOfTicks = 5;
 public:
 
  ForceInfusionTask(CreatureObject creo, CreatureObject creoTarget) {
@@ -27,7 +28,6 @@ public:
   Locker lockerC(creature);
   Locker lockerCT(creatureTarget,creature);
   if(creature != NULL && creatureTarget != NULL) {
-   int amountOfTicks = 5;
    if (counter < amountOfTicks && !creatureTarget->isDead()) {
     float heal = 500;
   

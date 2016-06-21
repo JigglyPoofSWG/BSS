@@ -128,10 +128,6 @@ uint32 DamageOverTime::applyDot(CreatureObject* victim) {
 		power = doForceChokeTick(victim, attacker);
 		nextTick.addMiliTime(6000);
 		break;
-	case CommandEffect::FORCEINFUSION:
-		power = doForceInfusionTick(victim, attacker);
-		nextTick.addMiliTime(6000);
-		break;
 	}
 
 	return power;
@@ -163,12 +159,6 @@ uint32 DamageOverTime::initDot(CreatureObject* victim, CreatureObject* attacker)
 		nextTick.addMiliTime(6000);
 		strength = (float)(strength * 0.01f) + (strength * (System::random(100) * 0.01f));
 		victim->showFlyText("combat_effects", "choke", 0xFF, 0, 0);
-		break;
-	case CommandEffect::FORCEINFUSION:
-		nextTick.addMiliTime(6000);
-		//strength = (float)(strength * 0.01f) + (strength * (System::random(100) * 0.01f));
-		//victim->showFlyText("combat_effects", "choke", 0xFF, 0, 0);
-
 		break;
 	}
 
@@ -370,31 +360,6 @@ uint32 DamageOverTime::doForceChokeTick(CreatureObject* victim, CreatureObject* 
 
 	return strength;
 
-}
-
-uint32 DamageOverTime::doForceInfusionTick(CreatureObject* victim, CreatureObject* attacker) {
-
-	uint32 attr = victim->getHAM(attribute);
-
-	int damage = (int)(strength);
-
-	Reference<CreatureObject*> attackerRef = attacker;
-	Reference<CreatureObject*> victimRef = victim;
-	uint8 attribute = this->attribute;
-
-	EXECUTE_TASK_4(attackerRef, victimRef, attribute, damage, {
-			Locker locker(victimRef_p);
-
-			Locker crossLocker(attackerRef_p, victimRef_p);
-
-			victimRef_p->inflictDamage(attackerRef_p, attribute_p, damage_p, false);
-			attackerRef_p->inflictDamage(attackerRef_p, attribute_p, damage_p, false);
-			victimRef_p->playEffect("clienteffect/pl_force_heal_self.cef","");
-			attackerRef_p->playEffect("clienteffect/pl_force_heal_self.cef","");
-	});
-
-
-	return damage;
 }
 
 float DamageOverTime::reduceTick(float reduction) {

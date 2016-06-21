@@ -81,43 +81,6 @@ public:
 			VisibilityManager::instance()->increaseVisibility(creature, visMod);
 			return SUCCESS;
 		}
-		
-	int doHealAction(CreatureObject* creature, const uint64& target, const UnicodeString& arguments = "") const {
-			ManagedReference<SceneObject*> targetObject = server->getZoneServer()->getObject(target);
-
-			if (targetObject == NULL || !targetObject->isTangibleObject() || targetObject == creature)
-				return INVALIDTARGET;
-
-			float checkRange = range;
-
-			if (creature->isProne())
-				return NOPRONE;
-
-			if(!checkDistance(creature, targetObject, checkRange))
-				return TOOFAR;
-
-			if (!CollisionManager::checkLineOfSight(creature, targetObject)) {
-				creature->sendSystemMessage("@container_error_message:container18");
-				return GENERALERROR;
-			}
-
-			ManagedReference<PlayerObject*> playerObject = creature->getPlayerObject();
-
-			if (playerObject != NULL && playerObject->getForcePower() < forceCost) {
-				creature->sendSystemMessage("@jedi_spam:no_force_power"); //"You do not have enough Force Power to peform that action.
-
-				return GENERALERROR;
-			}
-
-			CombatManager* combatManager = CombatManager::instance();
-			
-				if (playerObject != NULL)
-					playerObject->setForcePower(playerObject->getForcePower() - forceCost);
-
-			// Increase Visibility for Force Power.
-			VisibilityManager::instance()->increaseVisibility(creature, visMod);
-			return SUCCESS;
-		}
 
 	float getCommandDuration(CreatureObject *object, const UnicodeString& arguments) const {
 		return defaultTime * speed;

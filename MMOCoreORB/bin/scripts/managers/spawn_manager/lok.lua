@@ -166,6 +166,7 @@ lok_static_spawns = {
 	{"rifea_eicik",60,-23.1848,1.58812,1.95072,180.005,8145358, "conversation", "Rifea Eicik"},
 	{"rorha_wahe",60,7.54821,-0.894991,-8.57564,0,8145378, "conversation", "Rorha Wahe"},
 	{"vixur_webb",60,-13.2,-0.9,-20.2,22,8145383, "npc_sitting_chair", "Vixur Webb (a musician)"},
+	{"world_boss_acklay",0,3126.92,0,-4626.99,0,0, "", ""},
 	{"world_boss_kanan_jarrus",0,3068.27,0,-4621.94,0,0, "", ""},
 }
 

@@ -15,13 +15,15 @@ class ForceInfusionTask : public Task {
  ManagedReference<CreatureObject*> creature;
  ManagedReference<CreatureObject*> creatureTarget;
  int counter;
- int amountOfTicks = 5;
+ int amountOfTicks;
 public:
 
- ForceInfusionTask(CreatureObject creo, CreatureObject creoTarget) {
+ ForceInfusionTask(CreatureObject creo, CreatureObject creoTarget, int amountOfTicks) {
   creature = creo;  // This is the Attacker
   creatureTarget = creoTarget; // This is the target (one that takes damage)
   counter = 0;
+  this->amountOfTicks = amountOfTicks;
+
  }
 
  void run() {
@@ -30,13 +32,9 @@ public:
   if(creature != NULL && creatureTarget != NULL) {
    if (counter < amountOfTicks && !creatureTarget->isDead()) {
     float heal = 500;
-  
-    float healHealth = heal;
-    float healAction = heal;
-    float healMind = heal;
-    creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, healHealth, true);
-    creatureTarget->healDamage(creature, CreatureAttribute::ACTION, healAction, true);
-    creatureTarget->healDamage(creature, CreatureAttribute::MIND, healMind, true);
+    creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, heal, true);
+    creatureTarget->healDamage(creature, CreatureAttribute::ACTION, heal, true);
+    creatureTarget->healDamage(creature, CreatureAttribute::MIND, heal, true);
 
     creatureTarget->playEffect("clienteffect/pl_force_heal_self.cef", "");
 

@@ -49,12 +49,20 @@ ConversationScreen* TrainerInfoScreenHandler::handleScreen(CreatureObject* conve
 		String jedi3 = "force_discipline_powers_master";
 		String jedi4 = "force_discipline_enhancements_master";
 		String jedi5 = "force_discipline_healing_master";
+		if (ghost->getJediState() = 4){
+			String jedi6 = "force_rank_light_master";
+			session-> addAdditionalMasterSkill(jedi6);
+		} else if (ghost->getJediState() = 8){
+			String jedi7 = "force_rank_dark_master";
+			session-> addAdditionalMasterSkill(jedi7);
+		}
 
 		session->addAdditionalMasterSkill(jedi1);
 		session->addAdditionalMasterSkill(jedi2);
 		session->addAdditionalMasterSkill(jedi3);
 		session->addAdditionalMasterSkill(jedi4);
 		session->addAdditionalMasterSkill(jedi5);
+		
 	}
 
 	if (conversingNPC->getObjectNameStringIdName().contains("trainer_fs")) {
@@ -361,13 +369,33 @@ ConversationScreen* TrainerTrainSkillScreenHandler::handleScreen(CreatureObject*
 			conversationScreen = NULL;
 		}
 
-		// Set the screen play state if they mastered a fourth-tier box.
+		/*// Set the screen play state if they mastered a fourth-tier box.
 		if (skill->getSkillName().contains("force_sensitive")) {
 			if (skill->getSkillName().contains("_04")) {
 				JediManager::instance()->onFSTreeCompleted(conversingPlayer, skill->getSkillName());
 			}
-		}
+		}*/
+		// Set the screen play state if they mastered a fourth-tier box.
+		if (skill->getSkillName().contains("force_sensitive")) {
+			if (skill->getSkillName().contains("_04")) {
+				conversingPlayer->setScreenPlayState("VillageUnlockScreenPlay:" + skill->getSkillName(), 4);
+			}
 
+			int treesMastered = 0;
+			// If they have trained the 6th tree's 4th box, finish village.
+			SkillList* skills = conversingPlayer->getSkillList();
+			for (int i=0; i < skills->size(); ++i) {
+				String skillName = skills->get(i)->getSkillName();
+				if (skillName.contains("force_sensitive") && skillName.contains("_04")) {
+					treesMastered += 1;
+				}
+			}
+
+			if (treesMastered >= 6) { // Six trees to access village. State matches that in jedi manager.
+				conversingPlayer->setScreenPlayState("VillageJediProgression", 8);
+				JediManager::instance()->createOldManEncounter(conversingPlayer);
+			}
+		}
 	} else {
 		//Return screen depending on what failed.
 		if (!enoughCredits) {

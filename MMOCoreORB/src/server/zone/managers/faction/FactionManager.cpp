@@ -9,6 +9,8 @@
 #include "FactionMap.h"
 #include "server/zone/objects/player/PlayerObject.h"
 #include "templates/manager/TemplateManager.h"
+#include "server/zone/objects/group/GroupObject.h"
+#include "server/zone/managers/player/PlayerManager.h"
 
 FactionManager::FactionManager() {
 	setLoggingName("FactionManager");
@@ -201,23 +203,29 @@ void FactionManager::awardPvpFactionPoints(CreatureObject* killer, CreatureObjec
 	}	
 
 	if (rankD <= rankK){
-	modifiedXp = modifiedXp * ((rankK - rankD) + 1);
+	modifiedXp = 500;
 	} else if (rankD > rankK) {
-	modifiedXp = modifiedXp * ((rankD - rankK) + rankK);
+	modifiedXp = modifiedXp * (1 + (rankD - rankK) / 10.0f));
 	}
 	
 	lostXp = ((modifiedXp * 0.5) * -1);
+	
+	//ManagedReference<GroupObject*> group = killer->getGroup();
+	
+	//int numGrp = 0;
+	
+	//getNumberOfPlayerMembers()
 
 	if (killer->isPlayerCreature() && destructedObject->isPlayerCreature()) {
 		CreatureObject* killerCreature = cast<CreatureObject*>(killer);
 		ManagedReference<PlayerObject*> ghost = killerCreature->getPlayerObject();
 
 		ManagedReference<PlayerObject*> killedGhost = destructedObject->getPlayerObject();
-		
 		if (killer->isRebel() && destructedObject->isImperial()) {
-			if (killer->hasSkill("force_rank_light_novice") && destructedObject->hasSkill("force_rank_dark_novice")){
-				ghost->addExperience("force_rank_xp", modifiedXp);
-				killedGhost->addExperience("force_rank_xp", lostXp);
+				if (killer->hasSkill("force_rank_light_novice") && destructedObject->hasSkill("force_rank_dark_novice")){
+				ghost->addExperience("force_rank_xp", modifiedXp, true);
+				killedGhost->addExperience("force_rank_xp", lostXp, true);
+			
 			}
 			ghost->increaseFactionStanding("rebel", 30);
 			ghost->decreaseFactionStanding("imperial", 45);
@@ -225,8 +233,8 @@ void FactionManager::awardPvpFactionPoints(CreatureObject* killer, CreatureObjec
 			killedGhost->decreaseFactionStanding("imperial", 45);
 		} else if (killer->isImperial() && destructedObject->isRebel()) {
 			if (killer->hasSkill("force_rank_dark_novice") && destructedObject->hasSkill("force_rank_light_novice")){
-				ghost->addExperience("force_rank_xp", modifiedXp);
-				killedGhost->addExperience("force_rank_xp", lostXp);
+				ghost->addExperience("force_rank_xp", modifiedXp, true);
+				killedGhost->addExperience("force_rank_xp", lostXp), true;
 			}
 			ghost->increaseFactionStanding("imperial", 30);
 			ghost->decreaseFactionStanding("rebel", 45);

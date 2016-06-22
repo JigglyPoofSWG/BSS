@@ -129,75 +129,75 @@ void FactionManager::awardFactionStanding(CreatureObject* player, const String& 
 
 void FactionManager::awardPvpFactionPoints(CreatureObject* killer, CreatureObject* destructedObject) {
 	float modifiedXp = 0;
-	float lostXp = ((modifiedXp * 0.5) * -1);
+	float lostXp;
 	int rankK = 0;
 	int rankD = 0;
 	int lightR = 0;
 	int darkR = 0;
 	
-	if (destructedObject->hasSkill("force_rank_light_novice") || destructedObject->hasSkill("force_rank_dark_novice")){
-		modifiedXp = 500;
-		rankD = 1;
-	} else if (destructedObject->hasSkill("force_rank_light_rank_01") || destructedObject->hasSkill("force_rank_dark_rank_01")){
-		modifiedXp = 600;
-		rankD = 2;
-	} else if (destructedObject->hasSkill("force_rank_light_rank_02") || destructedObject->hasSkill("force_rank_dark_rank_02")){
-		modifiedXp = 700;
-		rankD = 3;
-	} else if (destructedObject->hasSkill("force_rank_light_rank_03") || destructedObject->hasSkill("force_rank_dark_rank_03")){
-		modifiedXp = 800;
-		rankD = 4;
-	} else if (destructedObject->hasSkill("force_rank_light_rank_04") || destructedObject->hasSkill("force_rank_dark_rank_04")){
-		modifiedXp = 900;
-		rankD = 5;
-	} else if (destructedObject->hasSkill("force_rank_light_rank_05") || destructedObject->hasSkill("force_rank_dark_rank_05")){
-		modifiedXp = 1200;
-		rankD = 6;
-	} else if (destructedObject->hasSkill("force_rank_light_rank_06") || destructedObject->hasSkill("force_rank_dark_rank_06")){
-		modifiedXp = 1400;
-		rankD = 7;
-	} else if (destructedObject->hasSkill("force_rank_light_rank_07") || destructedObject->hasSkill("force_rank_dark_rank_07")){
-		modifiedXp = 1600;
-		rankD = 8;
-	} else if (destructedObject->hasSkill("force_rank_light_rank_08") || destructedObject->hasSkill("force_rank_dark_rank_08")){
-		modifiedXp = 2000;
-		rankD = 9;
-	} else if (destructedObject->hasSkill("force_rank_light_rank_09") || destructedObject->hasSkill("force_rank_dark_rank_09")){
-		modifiedXp = 2400;
-		rankD = 10;
+	if (destructedObject->hasSkill("force_rank_light_master") || destructedObject->hasSkill("force_rank_dark_master")){
+		modifiedXp = 4000;
+		rankD = 12;
 	} else if (destructedObject->hasSkill("force_rank_light_rank_10") || destructedObject->hasSkill("force_rank_dark_rank_10")){
 		modifiedXp = 3000;
 		rankD = 11;
-	} else if (destructedObject->hasSkill("force_rank_light_master") || destructedObject->hasSkill("force_rank_dark_master")){
-		modifiedXp = 4000;
-		rankD = 12;
+	} else if (destructedObject->hasSkill("force_rank_light_rank_09") || destructedObject->hasSkill("force_rank_dark_rank_09")){
+		modifiedXp = 2400;
+		rankD = 10;
+	} else if (destructedObject->hasSkill("force_rank_light_rank_08") || destructedObject->hasSkill("force_rank_dark_rank_08")){
+		modifiedXp = 2000;
+		rankD = 9;
+	} else if (destructedObject->hasSkill("force_rank_light_rank_07") || destructedObject->hasSkill("force_rank_dark_rank_07")){
+		modifiedXp = 1600;
+		rankD = 8;
+	} else if (destructedObject->hasSkill("force_rank_light_rank_06") || destructedObject->hasSkill("force_rank_dark_rank_06")){
+		modifiedXp = 1400;
+		rankD = 7;
+	} else if (destructedObject->hasSkill("force_rank_light_rank_05") || destructedObject->hasSkill("force_rank_dark_rank_05")){
+		modifiedXp = 1200;
+		rankD = 6;
+	} else if (destructedObject->hasSkill("force_rank_light_rank_04") || destructedObject->hasSkill("force_rank_dark_rank_04")){
+		modifiedXp = 900;
+		rankD = 5;
+	} else if (destructedObject->hasSkill("force_rank_light_rank_03") || destructedObject->hasSkill("force_rank_dark_rank_03")){
+		modifiedXp = 800;
+		rankD = 4;
+	} else if (destructedObject->hasSkill("force_rank_light_rank_02") || destructedObject->hasSkill("force_rank_dark_rank_02")){
+		modifiedXp = 700;
+		rankD = 3;
+	} else if (destructedObject->hasSkill("force_rank_light_rank_01") || destructedObject->hasSkill("force_rank_dark_rank_01")){
+		modifiedXp = 600;
+		rankD = 2;
+	} else if (destructedObject->hasSkill("force_rank_light_novice") || destructedObject->hasSkill("force_rank_dark_novice")){
+		modifiedXp = 500;
+		rankD = 1;
 	}
 	
 	
-	if (killer->hasSkill("force_rank_dark_novice") || killer->hasSkill("force_rank_light_novice")){
-		rankK = 1;
-	} else if (killer->hasSkill("force_rank_dark_rank_01") || killer->hasSkill("force_rank_light_rank_01")){
-		rankK = 2;
-	} else if (killer->hasSkill("force_rank_dark_rank_02") || killer->hasSkill("force_rank_light_rank_02")){
-		rankK = 3;
-	} else if (killer->hasSkill("force_rank_dark_rank_03") || killer->hasSkill("force_rank_light_rank_03")){
-		rankK = 4;
-	} else if (killer->hasSkill("force_rank_dark_rank_04") || killer->hasSkill("force_rank_light_rank_04")){
-		rankK = 5;
-	} else if (killer->hasSkill("force_rank_dark_rank_05") || killer->hasSkill("force_rank_light_rank_05")){
-		rankK = 6;
-	} else if (killer->hasSkill("force_rank_dark_rank_06") || killer->hasSkill("force_rank_light_rank_06")){
-		rankK = 7;
-	} else if (killer->hasSkill("force_rank_dark_rank_07") || killer->hasSkill("force_rank_light_rank_07")){
-		rankK = 8;
-	} else if (killer->hasSkill("force_rank_dark_rank_08") || killer->hasSkill("force_rank_light_rank_08")){
-		rankK = 9;
-	} else if (killer->hasSkill("force_rank_dark_rank_09") || killer->hasSkill("force_rank_light_rank_09")){
-		rankK = 10;
+	if (killer->hasSkill("force_rank_dark_master") || killer->hasSkill("force_rank_light_master")){
+		rankK = 12;
 	} else if (killer->hasSkill("force_rank_dark_rank_10") || killer->hasSkill("force_rank_light_rank_10")){
 		rankK = 11;
-	} else if (killer->hasSkill("force_rank_dark_master") || killer->hasSkill("force_rank_light_master")){
-		rankK = 12;
+	} else if (killer->hasSkill("force_rank_dark_rank_09") || killer->hasSkill("force_rank_light_rank_09")){
+		rankK = 10;
+	} else if (killer->hasSkill("force_rank_dark_rank_08") || killer->hasSkill("force_rank_light_rank_08")){
+		rankK = 9;
+	} else if (killer->hasSkill("force_rank_dark_rank_07") || killer->hasSkill("force_rank_light_rank_07")){
+		rankK = 8;
+	} else if (killer->hasSkill("force_rank_dark_rank_06") || killer->hasSkill("force_rank_light_rank_06")){
+		rankK = 7;
+	} else if (killer->hasSkill("force_rank_dark_rank_05") || killer->hasSkill("force_rank_light_rank_05")){
+		rankK = 6;
+	} else if (killer->hasSkill("force_rank_dark_rank_04") || killer->hasSkill("force_rank_light_rank_04")){
+		rankK = 5;
+	} else if (killer->hasSkill("force_rank_dark_rank_03") || killer->hasSkill("force_rank_light_rank_03")){
+		rankK = 4;
+	} else if (killer->hasSkill("force_rank_dark_rank_02") || killer->hasSkill("force_rank_light_rank_02")){
+		rankK = 3;
+	} else if (killer->hasSkill("force_rank_dark_rank_01") || killer->hasSkill("force_rank_light_rank_01")){
+		rankK = 2;
+	} else if (killer->hasSkill("force_rank_dark_novice") || killer->hasSkill("force_rank_light_novice")){
+		rankK = 1;
 	}	
 
 	if (rankD <= rankK){
@@ -206,6 +206,8 @@ void FactionManager::awardPvpFactionPoints(CreatureObject* killer, CreatureObjec
 	modifiedXp = modifiedXp * ((rankD - rankK) + rankK);
 	}
 	
+	lostXp = ((modifiedXp * 0.5) * -1);
+
 	if (killer->isPlayerCreature() && destructedObject->isPlayerCreature()) {
 		CreatureObject* killerCreature = cast<CreatureObject*>(killer);
 		ManagedReference<PlayerObject*> ghost = killerCreature->getPlayerObject();

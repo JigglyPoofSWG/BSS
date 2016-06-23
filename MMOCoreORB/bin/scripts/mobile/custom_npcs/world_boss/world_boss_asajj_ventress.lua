@@ -1,5 +1,5 @@
 world_boss_asajj_ventress = Creature:new {
-	customName = "Asajj Ventress (Drommund Kaas World Boss)",
+	customName = "Asajj Ventress",
 	socialGroup = "dark_jedi",
 	faction = "",
 	level = 500,

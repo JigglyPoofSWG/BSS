@@ -1,16 +1,16 @@
-world_boss_kanan_jarrus = Creature:new {
-	customName = "Kanan Jarrus (Jedi Knight)",
-	socialGroup = "force",
-	faction = "",
-	level = 500,
+boss_luke_skywalker = Creature:new {
+	objectName = "@mob/creature_names:luke_skywalker",
+	socialGroup = "rebel",
+	faction = "rebel",
+	level = 300,
 	chanceHit = 30,
-	damageMin = 845,
-	damageMax = 1500,
-	baseXp = 55000,
-	baseHAM = 3106000,
-	baseHAMmax = 3352000,
+	damageMin = 1645,
+	damageMax = 3000,
+	baseXp = 68429,
+	baseHAM = 1324000,
+	baseHAMmax = 1430000,
 	armor = 3,
-	resists = {95,95,95,95,95,95,95,95,-1},
+	resists = {85,85,85,85,85,85,85,85,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -20,12 +20,12 @@ world_boss_kanan_jarrus = Creature:new {
 	milk = 0,
 	tamingChance = 0,
 	ferocity = 0,
-	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
-	creatureBitmask = PACK + HERD + KILLER,
+	pvpBitmask = ATTACKABLE,
+	creatureBitmask = PACK + KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_jedi_trainer_old_human_male_01.iff"},
+	templates = {"object/mobile/dressed_luke_skywalker.iff"},
 	lootGroups = {
 		{
 		groups = {
@@ -54,9 +54,9 @@ world_boss_kanan_jarrus = Creature:new {
 		}
 		
 	},
-	weapons = {"dark_jedi_weapons_gen4"},
+	weapons = {"luke_skywalker_weapons"},
 	conversationTemplate = "",
-	attacks = merge(lightsabermaster,forcepowermaster,lightjedimaster)
+	attacks = merge(lightsabermaster,forcepowermaster)
 }
 
-CreatureTemplates:addCreatureTemplate(world_boss_kanan_jarrus, "world_boss_kanan_jarrus")
+CreatureTemplates:addCreatureTemplate(boss_luke_skywalker, "boss_luke_skywalker")

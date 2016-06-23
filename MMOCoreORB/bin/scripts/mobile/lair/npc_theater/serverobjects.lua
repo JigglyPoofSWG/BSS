@@ -74,6 +74,8 @@ includeFile("lair/npc_theater/global_brigand_scout_camp_neutral_small_theater.lu
 includeFile("lair/npc_theater/global_dark_jedi_camp_dark_jedi_theater.lua")
 --Custom
 includeFile("lair/npc_theater/global_light_jedi_camp_light_jedi_theater.lua")
+includeFile("lair/npc_theater/global_rogue_jedi_camp_rogue_jedi_theater.lua")
+
 --Custom
 includeFile("lair/npc_theater/global_gambler_camp_neutral_small_theater.lua")
 includeFile("lair/npc_theater/global_imperial_1st_lieutenant_camp_imperial_medium_theater.lua")

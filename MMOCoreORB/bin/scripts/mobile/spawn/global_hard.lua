@@ -73,6 +73,15 @@ global_hard = {
 			weighting = 1,
 			size = 25
 		},
+		{
+			lairTemplateName = "global_rogue_jedi_camp_rogue_jedi_theater",
+			spawnLimit = 3,
+			minDifficulty = 261,
+			maxDifficulty = 270,
+			numberToSpawn = 0,
+			weighting = 1,
+			size = 20
+		},
 	}
 }
 

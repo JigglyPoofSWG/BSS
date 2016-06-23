@@ -1,16 +1,16 @@
-world_boss_kanan_jarrus = Creature:new {
-	customName = "Kanan Jarrus (Jedi Knight)",
-	socialGroup = "force",
-	faction = "",
-	level = 500,
+boss_darth_vader = Creature:new {
+	objectName = "@mob/creature_names:darth_vader",
+	socialGroup = "imperial",
+	faction = "imperial",
+	level = 300,
 	chanceHit = 30,
-	damageMin = 845,
-	damageMax = 1500,
-	baseXp = 55000,
-	baseHAM = 3106000,
-	baseHAMmax = 3352000,
+	damageMin = 1645,
+	damageMax = 3000,
+	baseXp = 68549,
+	baseHAM = 1385000,
+	baseHAMmax = 1471000,
 	armor = 3,
-	resists = {95,95,95,95,95,95,95,95,-1},
+	resists = {85,85,85,85,85,85,85,85,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -20,13 +20,14 @@ world_boss_kanan_jarrus = Creature:new {
 	milk = 0,
 	tamingChance = 0,
 	ferocity = 0,
-	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
-	creatureBitmask = PACK + HERD + KILLER,
+	pvpBitmask = ATTACKABLE,
+	creatureBitmask = PACK + KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
+  	scale = 1.25,
 
-	templates = {"object/mobile/dressed_jedi_trainer_old_human_male_01.iff"},
-	lootGroups = {
+	templates = {"object/mobile/darth_vader.iff"},
+		lootGroups = {
 		{
 		groups = {
 				{group = "holocron_dark", chance = 2500000},
@@ -54,9 +55,9 @@ world_boss_kanan_jarrus = Creature:new {
 		}
 		
 	},
-	weapons = {"dark_jedi_weapons_gen4"},
+	weapons = {"darth_vader_weapons"},
 	conversationTemplate = "",
-	attacks = merge(lightsabermaster,forcepowermaster,lightjedimaster)
+	attacks = merge(lightsabermaster,forcepowermaster)
 }
 
-CreatureTemplates:addCreatureTemplate(world_boss_kanan_jarrus, "world_boss_kanan_jarrus")
+CreatureTemplates:addCreatureTemplate(boss_darth_vader, "boss_darth_vader")

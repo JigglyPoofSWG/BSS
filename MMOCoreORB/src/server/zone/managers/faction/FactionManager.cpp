@@ -203,9 +203,9 @@ void FactionManager::awardPvpFactionPoints(CreatureObject* killer, CreatureObjec
 	}	
 
 	if (rankD <= rankK){
-	modifiedXp = 500;
+	modifiedXp = modifiedXp;
 	} else if (rankD > rankK) {
-	modifiedXp = modifiedXp * (1 + (rankD - rankK) / 10.0f));
+	modifiedXp = modifiedXp * (1 + ((rankD - rankK) / 10.0f));
 	}
 	
 	lostXp = ((modifiedXp * 0.5) * -1);

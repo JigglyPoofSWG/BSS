@@ -1,5 +1,6 @@
 boss_palpatine = Creature:new {
-	objectName = "@theme_park_name:emperor_palpatine",
+	objectName = "",
+	customName = "Darth Sidious",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 500,

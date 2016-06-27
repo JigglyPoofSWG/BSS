@@ -43,6 +43,8 @@
 
 
 --Children folder includes
+--Custom
+includeFile("mobile/skeleton/varactyl.lua")
 
 -- Server Objects
 includeFile("mobile/skeleton/acklay.lua")

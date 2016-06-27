@@ -24,6 +24,7 @@ boss_luke_skywalker = Creature:new {
 	creatureBitmask = PACK + KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
+	scale = 1.25,
 
 	templates = {"object/mobile/dressed_luke_skywalker.iff"},
 	lootGroups = {

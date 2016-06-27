@@ -25,7 +25,7 @@ scorching_terror = Creature:new {
 	creatureBitmask = PACK + KILLER + STALKER,
 	optionsBitmask = AIENABLED,
 	diet = CARNIVORE,
-	scale = 1.5,
+	scale = 5.5,
 
 	templates = {"object/mobile/som/scorching_terror.iff"},
 	lootGroups = {
@@ -97,6 +97,7 @@ scorching_terror = Creature:new {
 	attacks = {
 		{"creatureareacombo","stateAccuracyBonus=100"},
 		{"creatureareaknockdown","stateAccuracyBonus=100"}
+		
 	}
 }
 

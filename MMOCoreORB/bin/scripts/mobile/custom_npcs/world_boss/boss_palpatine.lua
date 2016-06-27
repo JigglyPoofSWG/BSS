@@ -25,6 +25,7 @@ boss_palpatine = Creature:new {
 	creatureBitmask = PACK + KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
+	scale = 1.35,
 
 	templates = {"object/mobile/palpatine.iff"},
 	lootGroups = {

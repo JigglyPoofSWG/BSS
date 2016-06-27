@@ -15,6 +15,9 @@ includeFile("custom_npcs/cunge/lava_flea.lua")
 includeFile("custom_npcs/cunge/scorching_terror.lua")
 includeFile("custom_npcs/cunge/sher_kar.lua")
 includeFile("custom_npcs/cunge/varactyl.lua")
+includeFile("custom_npcs/cunge/boss_lord_vartonis.lua")
+includeFile("custom_npcs/cunge/boss_mara_jade.lua")
+includeFile("custom_npcs/cunge/wampa.lua")
 -- End Thugs <<>>
 
 -- Factionals <<>>

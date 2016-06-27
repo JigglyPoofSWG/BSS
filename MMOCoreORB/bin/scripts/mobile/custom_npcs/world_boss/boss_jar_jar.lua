@@ -25,6 +25,7 @@ boss_jar_jar = Creature:new {
 	creatureBitmask = PACK + KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
+	scale = 1.25,
 
 	templates = {"object/mobile/gungan_male.iff"},
 	lootGroups = {

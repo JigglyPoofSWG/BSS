@@ -25,7 +25,7 @@ boss_general_grievous = Creature:new {
 	creatureBitmask = PACK + KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
-	scale = 1.15,
+	scale = 1.55,
 
 	templates = {"object/mobile/ep3/general_grievous.iff"},
 	lootGroups = {

@@ -24,6 +24,7 @@ boss_han_solo = Creature:new {
 	creatureBitmask = PACK + KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
+	scale = 1.25,
 
 	templates = {"object/mobile/han_solo.iff"},
 	lootGroups = {

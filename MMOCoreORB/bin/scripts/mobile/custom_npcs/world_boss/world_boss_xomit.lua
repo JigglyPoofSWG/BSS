@@ -25,7 +25,7 @@ world_boss_xomit = Creature:new {
 	creatureBitmask = KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
-	scale = 1.15,
+	scale = 1.25,
 
 	templates = {"object/mobile/dressed_black_sun_guard.iff"},
 	lootGroups = {

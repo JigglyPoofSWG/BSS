@@ -1,7 +1,7 @@
 world_boss_asajj_ventress = Creature:new {
 	customName = "Asajj Ventress",
-	socialGroup = "dark_jedi",
-	faction = "",
+	socialGroup = "imperial",
+	faction = "imperial",
 	level = 500,
 	chanceHit = 30,
 	damageMin = 845,
@@ -24,6 +24,7 @@ world_boss_asajj_ventress = Creature:new {
 	creatureBitmask = PACK + HERD + KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
+	scale = 1.25,
 
 	templates = {"object/mobile/dressed_dathomir_spider_nightsister_spellweaver.iff"},
 	lootGroups = {

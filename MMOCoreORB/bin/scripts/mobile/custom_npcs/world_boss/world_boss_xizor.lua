@@ -25,7 +25,7 @@ world_boss_xizor = Creature:new {
 	creatureBitmask = KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
-	scale = 1.15,
+	scale = 1.35,
 
 	templates = {"object/mobile/dressed_death_watch_silver.iff"},
 	lootGroups = {

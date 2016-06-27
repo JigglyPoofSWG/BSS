@@ -25,7 +25,7 @@ world_boss_ziton = Creature:new {
 	creatureBitmask = KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
-	scale = 1.15,
+	scale = 1.25,
 
 	templates = {"object/mobile/dressed_rebel_ris_04.iff"},
 	lootGroups = {

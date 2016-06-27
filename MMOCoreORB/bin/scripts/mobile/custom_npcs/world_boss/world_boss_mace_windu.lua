@@ -1,7 +1,7 @@
 world_boss_mace_windu = Creature:new {
 	customName = "Mace Windu (Jedi Master)",
 	socialGroup = "rebel",
-	faction = "rebl",
+	faction = "rebel",
 	level = 500,
 	chanceHit = 30,
 	damageMin = 845,
@@ -24,6 +24,7 @@ world_boss_mace_windu = Creature:new {
 	creatureBitmask = PACK + HERD + KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
+	scale = 1.25,
 
 	templates = {"object/mobile/dressed_jedi_trainer_old_human_male_01.iff"},
 	lootGroups = {
